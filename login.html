@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+  }
+
+  .login-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .login-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .login-tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-tab.active {
+    background-color: #5900ff;
+    color: #fff;
+  }
+
+  .login-form {
+    display: none;
+  }
+
+  .login-form.active {
+    display: block;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+            width: 250px;
+            height: 120px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+  .login-button {
+    background-color: #5900ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-button:hover {
+    background-color: #5900ff;
+  }
+</style>
+<script>
+  function switchTab(tabName) {
+    document.querySelectorAll('.login-tab').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.login-form').forEach(form => form.classList.remove('active'));
+
+    document.getElementById(tabName + '-tab').classList.add('active');
+    document.getElementById(tabName + '-form').classList.add('active');
+  }
+</script>
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://www.scconline.com/blog/wp-content/uploads/2018/12/CHRIST-Logo-New.jpg" class="logo">
+    <h1>Login</h1>
+    <div class="login-tabs">
+      <button id="faculty-tab" class="login-tab active" onclick="switchTab('faculty')">Faculty</button>
+      <button id="admin-tab" class="login-tab" onclick="switchTab('admin')">Admin</button>
+    </div>
+    <form id="faculty-form" class="login-form active">
+      <div class="form-group">
+        <label for="faculty-username">Username</label>
+        <input type="text" id="faculty-username" name="faculty-username" placeholder="Enter your username">
+      </div>
+      <div class="form-group">
+        <label for="faculty-password">Password</label>
+        <input type="password" id="faculty-password" name="faculty-password" placeholder="Enter your password">
+      </div>
+      <button class="login-button" type="submit">Login as Faculty</button>
+    </form>
+    <form id="admin-form" class="login-form">
+      <div class="form-group">
+        <label for="admin-username">Username</label>
+        <input type="text" id="admin-username" name="admin-username" placeholder="Enter your username">
+      </div>
+      <div class="form-group">
+        <label for="admin-password">Password</label>
+        <input type="password" id="admin-password" name="admin-password" placeholder="Enter your password">
+      </div>
+      <button class="login-button" type="submit">Login as Admin</button>
+    </form>
+  </div>
+</body>
+</html>

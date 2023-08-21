@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Details</title>
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f7f7f7;
+    }
+    .edit-button {
+      background-color: #3700ff;
+      color: #3700ff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .faculty-details {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .timetable {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .modal-header {
+      background-color: #3700ff;
+      color: #fff;
+      border-bottom: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+ <script>
+  function toggleEdit() {
+    const detailsSection = document.getElementById('faculty-details');
+    const editButton = document.getElementById('edit-button');
+    const editMode = detailsSection.contentEditable === 'true';
+
+    detailsSection.contentEditable = !editMode;
+    detailsSection.classList.toggle('editable', !editMode);
+    editButton.textContent = editMode ? 'Edit' : 'Save';
+  }
+</script>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="faculty-details">
+          <h2 class="mb-4">Faculty Details</h2>
+          <p><strong>Name:</strong> <span id="faculty-name">John Doe</span></p>
+          <p><strong>Faculty ID:</strong> <span id="faculty-id">F12345</span></p>
+          <p><strong>Email:</strong><span id="faculty-email">john.doe@example.com</span></p>
+          <p><strong>Contact:</strong> <span id="faculty-contact">(123) 456-7890</span></p>
+          <p><strong>Address:</strong> <span id="faculty-address">123 Main St, City</span></p>
+          <button id="edit-button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#editModal">Edit</button>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="timetable">
+          <h2 class="mb-4">Timetable</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Date</th>
+                <th>Confidence Score</th>
+                <th>P/A Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CSE101</td>
+                <td>Introduction to Computer Science</td>
+                <td>2023-08-21</td>
+                <td>85%</td>
+                <td>P</td>
+              </tr>
+              <tr>
+                <td>MAT202</td>
+                <td>Advanced Mathematics</td>
+                <td>2023-08-22</td>
+                <td>92%</td>
+                <td>P</td>
+              </tr>
+              <!-- Add more rows for additional courses -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Edit Modal -->
+   <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Faculty Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Edit form here -->
+          <form id="edit-form">
+            <div class="form-group">
+              <label for="edit-name">Name</label>
+              <input type="text" class="form-control" id="edit-name">
+            </div>
+            <div class="form-group">
+              <label for="edit-faculty-id">Faculty ID</label>
+              <input type="text" class="form-control" id="edit-faculty-id">
+            </div>
+            <div class="form-group">
+              <label for="edit-email">Email</label>
+              <input type="email" class="form-control" id="edit-email">
+            </div>
+            <div class="form-group">
+              <label for="edit-contact">Contact</label>
+              <input type="tel" class="form-control" id="edit-contact">
+            </div>
+            <div class="form-group">
+              <label for="edit-address">Address</label>
+              <input type="text" class="form-control" id="edit-address">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="saveChanges()">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and additional scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function saveChanges() {
+      const newName = document.getElementById('edit-name').value;
+      const newFacultyID = document.getElementById('edit-faculty-id').value;
+      const newEmail = document.getElementById('edit-email').value;
+      const newContact = document.getElementById('edit-contact').value;
+      const newAddress = document.getElementById('edit-address').value;
+
+      document.getElementById('faculty-name').textContent = newName;
+      document.getElementById('faculty-id').textContent = newFacultyID;
+      document.getElementById('faculty-email').textContent = newEmail;
+      document.getElementById('faculty-contact').textContent = newContact;
+      document.getElementById('faculty-address').textContent = newAddress;
+
+      $('#editModal').modal('hide');
+    }
+  </script>
+</body>
+</html>
