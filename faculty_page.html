@@ -171,6 +171,69 @@
                     <td>92%</td>
                     <td>P</td>
                   </tr>
+                  <tr>
+                    <td>PHY301</td>
+                    <td>Physics for Engineers</td>
+                    <td>2023-08-23</td>
+                    <td>78%</td>
+                    <td>P</td>
+                  </tr>
+                  <tr>
+                    <td>BIO101</td>
+                    <td>Introduction to Biology</td>
+                    <td>2023-08-24</td>
+                    <td>88%</td>
+                    <td>P</td>
+                  </tr>
+                  <tr>
+                    <td>ENG215</td>
+                    <td>English Literature</td>
+                    <td>2023-08-25</td>
+                    <td>95%</td>
+                    <td>P</td>
+                  </tr>
+                  <tr>
+                    <td>HIS101</td>
+                    <td>World History</td>
+                    <td>2023-08-26</td>
+                    <td>70%</td>
+                    <td>P</td>
+                  </tr>
+                    <tr>
+          <td>CHEM110</td>
+          <td>Chemistry Fundamentals</td>
+          <td>2023-08-27</td>
+          <td>82%</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td>ECON201</td>
+          <td>Principles of Economics</td>
+          <td>2023-08-28</td>
+          <td>91%</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td>ART101</td>
+          <td>Introduction to Art</td>
+          <td>2023-08-29</td>
+          <td>79%</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td>MUS101</td>
+          <td>Music Appreciation</td>
+          <td>2023-08-30</td>
+          <td>87%</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td>POLI220</td>
+          <td>Political Science</td>
+          <td>2023-08-31</td>
+          <td>65%</td>
+          <td>P</td>
+        </tr>
                   <!-- Add more rows for additional courses -->
                 </tbody>
               </table>
@@ -238,7 +301,7 @@
               <label for="editAddress" class="form-label">Address</label>
               <textarea class="form-control" id="editAddress" name="editAddress" rows="3"></textarea>
             </div>
-            <button type="submit" class="edit-button">Save Changes</button>
+            <button type="submit" class="edit-button" data-bs-dismiss="modal">Save Changes</button>
           </form>
         </div>
       </div>
@@ -266,12 +329,23 @@
       document.getElementById('faculty-address').textContent = editedAddress;
   
       // Close the modal and remove backdrop
-      editModal.hide();
+      const modalContent = document.getElementById('editModalContent');
+    modalContent.scrollTop = 0;
+    const scrollHeight = modalContent.scrollHeight;
+
+    // Update the modal's scroll height
+    modalContent.style.maxHeight = scrollHeight + 'px';
+      
+      
+      const otherModals = document.querySelectorAll('.modal.show');
+    
+    if (otherModals.length === 0) {
       const modalBackdrop = document.querySelector('.modal-backdrop');
       if (modalBackdrop) {
         modalBackdrop.parentNode.removeChild(modalBackdrop);
       }
-    });
+    }
+  });
   </script> 
     
 </body>
