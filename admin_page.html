@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AttendancePro</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f7f7f7;
+    }
+    .edit-button {
+      background-color: #45064d;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .faculty-details {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .timetable {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .modal-header {
+      background-color: #45064d;
+      color: #fff;
+      border-bottom: none;
+    }
+    .faculty-id {
+      color: #fff;
+      font-size: 16px;
+      margin-left: auto; /* Push the faculty ID to the right side */
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Bootslander
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html"><span>AttendancePro</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+      
+      <div class="faculty-id">
+        <h2>Administrator</span></h2>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+  
+
+    <!-- ======= Details Section ======= -->
+        <section id="details" class="details">
+            <div class="container">
+              <!-- Button to open the teacher registration modal -->
+<button type="button" class="edit-button" data-bs-toggle="modal" data-bs-target="#teacherModal">
+    Teacher Registration
+  </button>
+  
+  <!-- Teacher Registration Modal -->
+  <div class="modal fade" id="teacherModal" tabindex="-1" aria-labelledby="teacherModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teacherModalLabel">Register a Teacher</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Teacher Registration Form -->
+          
+          <form id="teacher-registration-form">
+            <div class="mb-3">
+                <label for="teacherName" class="form-label">Teacher Name</label>
+                <input type="text" class="form-control" id="teacherName" name="teacherName" required>
+              </div>
+              <div class="mb-3">
+                <label for="designation" class="form-label">Designation</label>
+                <input type="text" class="form-control" id="designation" name="designation" required>
+              </div>
+              <div class="mb-3">
+                <label for="department" class="form-label">Department</label>
+                <input type="text" class="form-control" id="department" name="department" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email ID</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="facultyId" class="form-label">Faculty ID</label>
+                <input type="text" class="form-control" id="facultyId" name="facultyId" required>
+              </div>
+            <!-- Teacher Form Fields (same as before) -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="edit-button" id="teacherSubmitButton">Register Teacher</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+        <!-- Button to open the student registration modal -->
+<button type="button" class="edit-button" data-bs-toggle="modal" data-bs-target="#studentModal">
+    Student Registration
+  </button>
+  
+  <!-- Student Registration Modal -->
+  <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="studentModalLabel">Register a Student</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Student Registration Form -->
+          <form id="student-registration-form">
+            <!-- Student Form Fields (same as before) -->
+            <div class="mb-3">
+                <label for="studentName" class="form-label">Student Name</label>
+                <input type="text" class="form-control" id="studentName" name="studentName" required>
+              </div>
+              <div class="mb-3">
+                <label for="courseName" class="form-label">Course Name</label>
+                <input type="text" class="form-control" id="courseName" name="courseName" required>
+              </div>
+              <div class="mb-3">
+                <label for="studentEmail" class="form-label">Email ID</label>
+                <input type="email" class="form-control" id="studentEmail" name="studentEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="studentId" class="form-label">Student ID</label>
+                <input type="text" class="form-control" id="studentId" name="studentId" required>
+              </div>
+              <div class="mb-3">
+                <label for="bloodGroup" class="form-label">Blood Group</label>
+                <input type="text" class="form-control" id="bloodGroup" name="bloodGroup" required>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="edit-button" id="studentSubmitButton">Register Student</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button to open the schedule check modal -->
+<button type="button" class="edit-button" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+    Check Schedule
+  </button>
+  
+  <!-- Schedule Check Modal -->
+  <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="scheduleModalLabel">Check Schedule</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Include the schedule information here -->
+          <p>This is where you can display the schedule information.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Button to open the attendance database check modal -->
+<button type="button" class="edit-button" data-bs-toggle="modal" data-bs-target="#attendanceModal">
+    Check Attendance Database
+  </button>
+  
+  <!-- Attendance Database Check Modal -->
+  <div class="modal fade" id="attendanceModal" tabindex="-1" aria-labelledby="attendanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="attendanceModalLabel">Check Attendance Database</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Include the attendance database information here -->
+          <p>This is where you can display information from the attendance database.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+      </div>
+    </section><!-- End Details Section -->
+
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>AttendancePro</span></strong>. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Bootstrap JS and additional scripts -->
+  <!-- Bootstrap JS and additional scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- Edit Modal -->
+  <script>
+    document.getElementById("teacher-registration-form").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent the form from submitting normally
+  
+      // Retrieve form data
+      const formData = new FormData(e.target);
+  
+      // You can send this formData to a server using fetch or another method
+      // Example:
+      fetch("/api/register-teacher", {
+        method: "POST",
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response from the server, e.g., show a success message
+        console.log(data);
+        alert("Teacher registered successfully!");
+        // Close the modal
+        document.getElementById("teacherModal").modal("hide");
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while registering the teacher.");
+      });
+    });
+  
+    document.getElementById("student-registration-form").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent the form from submitting normally
+  
+      // Retrieve form data
+      const formData = new FormData(e.target);
+  
+      // You can send this formData to a server using fetch or another method
+      // Example:
+      fetch("/api/register-student", {
+        method: "POST",
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response from the server, e.g., show a success message
+        console.log(data);
+        alert("Student registered successfully!");
+        // Close the modal
+        document.getElementById("studentModal").modal("hide");
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while registering the student.");
+      });
+    });
+  </script>
+  
+  
+</body>
+
+</html>
