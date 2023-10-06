@@ -107,7 +107,7 @@
                     <select class="form-control" id="role">
                       <option value="faculty">Faculty</option>
                       <option value="admin">Admin</option>
-                      <option value="student">Student</option>
+                      <option value="admin">Student</option>
                     </select>
                   </div>
                 <!-- Submit button -->
@@ -137,17 +137,23 @@
       };
 
       if (validCredentials[role] && username === validCredentials[role].username && password === validCredentials[role].password) {
-        if (role === "faculty") {
+        if (role === "faculty") 
+        {
           window.location.href = "faculty_page.html";
-        } else if (role === "admin") {
+        } 
+        else if (role === "admin") 
+        {
           window.location.href = "admin_page.html";
-        } else if (role === "student") { // Added Student Page Redirect
+        }
+        else if (role === "student") 
+        { // Added Student Page Redirect
           window.location.href = "student_page.html";
-      } else {
+        }
+        else {
         alert("Invalid credentials. Please try again.");
       }
-    });
-    </script>
+    }});
+   </script>
   <!-- Section: Design Block -->
   </main>
 </body>
