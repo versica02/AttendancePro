@@ -107,6 +107,7 @@
                     <select class="form-control" id="role">
                       <option value="faculty">Faculty</option>
                       <option value="admin">Admin</option>
+                      <option value="student">Student</option>
                     </select>
                   </div>
                 <!-- Submit button -->
@@ -131,7 +132,8 @@
       // Simulated hardcoded credentials
       const validCredentials = {
         faculty: { username: "arushi", password: "1234" },
-        admin: { username: "adminuser", password: "admin123" }
+        admin: { username: "adminuser", password: "admin123" },
+        student: { username: "studentuser", password: "student123" } 
       };
 
       if (validCredentials[role] && username === validCredentials[role].username && password === validCredentials[role].password) {
@@ -139,7 +141,8 @@
           window.location.href = "faculty_page.html";
         } else if (role === "admin") {
           window.location.href = "admin_page.html";
-        }
+        } else if (role === "student") { // Added Student Page Redirect
+          window.location.href = "student_page.html";
       } else {
         alert("Invalid credentials. Please try again.");
       }
