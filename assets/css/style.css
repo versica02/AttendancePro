@@ -1642,3 +1642,10 @@ section {
     margin: -20px 0 30px 0;
   }
 }
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 20px; /* Adjust the margin as needed */
+}
