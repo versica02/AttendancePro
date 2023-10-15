@@ -98,7 +98,7 @@
       </div>
       
       <div class="student-id">
-        <h2>Student ID: <span id="header-student-id">S12345</span></h2>
+        <h2>Student ID: <span id="header-student-id">2141146</span></h2>
       </div>
 
     </div>
@@ -125,7 +125,7 @@
   </section><!-- End Hero -->
 
   <main id="main">
-  
+
 
     <!-- ======= Details Section ======= -->
     <section id="details" class="details">
@@ -146,7 +146,7 @@
 
 
       <button type="button" class="edit-button" data-bs-toggle="modal" data-bs-target="#attendanceModal">
-        Check Attendance Database
+        Check Attendance
       </button>
       <div class="modal fade" id="attendanceModal" tabindex="-1" aria-labelledby="attendanceModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -155,7 +155,7 @@
               <h5 class="modal-title" id="attendanceModalLabel">Check Attendance Database</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="overflow-y: scroll; max-height: 400px;">
               <!-- Include the attendance database information here -->
               <table>
                 <thead>
@@ -190,12 +190,79 @@
                        <td>2:01 PM</td>
                        <td>2:57 PM</td>
                       </tr>
-                      <tr>
+                     <tr>
                        <td>2141146</td>
                        <td>06-10-2023</td>
                        <td>3:03 PM</td>
                        <td>4:59 PM</td>
                       </tr>
+                      <tr>
+                        <td>2141146</td>
+<<<<<<< HEAD
+                        <td>07-15-2023</td>
+                        <td>10:30 AM</td>
+                        <td>12:45 PM</td>
+=======
+                        <td>07-10-2023</td>
+                        <td>9:00 AM</td>
+                        <td>9:55 AM</td>
+>>>>>>> 67f28b50c0a87c8edbc1bea973a7171fa965d9c8
+                      </tr>
+                      <tr>
+                        <td>2141146</td>
+                        <td>07-10-2023</td>
+<<<<<<< HEAD
+                        <td>2:30 PM</td>
+                        <td>3:15 PM</td>
+                      </tr>
+                      <tr>
+                        <td>2141146</td>
+                        <td>08-10-2023</td>
+                        <td>11:15 AM</td>
+                        <td>12:00 PM</td>
+                      </tr>
+                      <tr>
+                        <td>2141146</td>
+                        <td>09-10-2023</td>
+                        <td>4:45 PM</td>
+                        <td>5:30 PM</td>
+                      </tr>
+                      <tr>
+                        <td>2141146</td>
+                        <td>10-10-2023</td>
+                        <td>10:00 AM</td>
+                        <td>10:45 AM</td>
+                      </tr>
+                      <tr>
+                        <td>2141146</td>
+                        <td>11-10-2023</td>
+                        <td>1:20 PM</td>
+                        <td>2:05 PM</td>
+                      </tr>
+
+=======
+                        <td>10:08 AM</td>
+                        <td>11:59 AM</td>
+                      </tr>
+                      <tr>
+                        <td>2141146</td>
+                        <td>07-10-2023</td>
+                        <td>12:11 PM</td>
+                        <td>12:52 PM</td>
+                      </tr>
+                      <tr>
+                        <td>2141146</td>
+                        <td>07-10-2023</td>
+                        <td>2:01 PM</td>
+                        <td>2:57 PM</td>
+                      </tr>
+                      <tr>
+                        <td>2141146</td>
+                        <td>07-10-2023</td>
+                        <td>3:03 PM</td>
+                        <td>4:59 PM</td>
+                      </tr>
+>>>>>>> 67f28b50c0a87c8edbc1bea973a7171fa965d9c8
                   </tbody>
                 </thead>
             </table>
@@ -217,7 +284,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-    
+
               <p>This is where you can display information from the marks card.</p>
             </div>
             <div class="modal-footer">
@@ -237,7 +304,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-    
+
               <p>This is where you can display Fee information.</p>
             </div>
             <div class="modal-footer">
@@ -246,10 +313,10 @@
           </div>
         </div>
       </div>
-      
+
     </section><!-- End Details Section -->
 
-  
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -257,7 +324,7 @@
       <div class="copyright">
         &copy; Copyright <strong><span>AttendancePro</span></strong>. All Rights Reserved
       </div>
-      
+
     </div>
   </footer><!-- End Footer -->
 
@@ -314,17 +381,17 @@
   </div>
   <script>
     const editModal = new bootstrap.Modal(document.getElementById('editModal'));
-  
+
     document.getElementById('editForm').addEventListener('submit', function (e) {
       e.preventDefault();
-  
+
       // Update student details based on form input
       const editedName = document.getElementById('editName').value;
       const editedStudentID = document.getElementById('editStudentID').value;
       const editedEmail = document.getElementById('editEmail').value;
       const editedContact = document.getElementById('editContact').value;
       const editedAddress = document.getElementById('editAddress').value;
-  
+
       // Update the displayed details
       document.getElementById('student-name').textContent = editedName;
       document.getElementById('student-id').textContent = editedStudentID;
@@ -332,7 +399,7 @@
       document.getElementById('student-email').textContent = editedEmail;
       document.getElementById('student-contact').textContent = editedContact;
       document.getElementById('student-address').textContent = editedAddress;
-  
+
       // Close the modal and remove backdrop
       const modalContent = document.getElementById('editModalContent');
     modalContent.scrollTop = 0;
@@ -340,10 +407,10 @@
 
     // Update the modal's scroll height
     modalContent.style.maxHeight = scrollHeight + 'px';
-      
-      
+
+
       const otherModals = document.querySelectorAll('.modal.show');
-    
+
     if (otherModals.length === 0) {
       const modalBackdrop = document.querySelector('.modal-backdrop');
       if (modalBackdrop) {
@@ -351,8 +418,8 @@
       }
     }
   });
-  </script> 
-    
+  </script>
+
 </body>
 
 </html>
