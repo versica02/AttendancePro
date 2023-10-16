@@ -56,6 +56,8 @@
       background-color: #45064d;
       color: #fff;
       border-bottom: none;
+      font-size: large;
+      
     }
     .student-id {
       color: #fff;
@@ -75,25 +77,38 @@
       background-color: #f2f2f2;
     }
 
+
     .centered-container {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  position: relative;
+  top: -350px;
+}
+
+.buttoncontainer {
+  display: inline-block; /* Add this line to make it inline with the form */
+  vertical-align: top; /* Add this line to align it at the top of the form */
+  margin-left: 10px; /* Adjust the margin as needed to create space between the form and the buttoncontainer */
+  font-size: 30px; /* Increase the font size to your desired value */
+}
+
+.centered-container {
       text-align: center;
       margin-top: 20px;
       position: relative;
       top: -350px;
-      
+      font-size: 20px;
     
     }
 
     .centered-container1{
 
-      margin-right: 20px;
+      margin-right: 150px;
     }
     .edit-button .centered-container1 {
-  padding-right: 80px;
+     padding-right: 100px;
 }
-
-
-
     
   </style>
 
@@ -510,6 +525,50 @@
     }
   });
   </script>
+
+<script>
+  const webcamContainer = document.getElementById("webcamContainer");
+  const webcam = document.getElementById("webcam");
+  const captureButton = document.getElementById("captureButton");
+
+  // Get user media and display webcam video
+  async function initCamera() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      webcam.srcObject = stream;
+    } catch (error) {
+      console.error("Error accessing webcam:", error);
+    }
+  }
+
+  captureButton.addEventListener("click", () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = webcam.videoWidth;
+    canvas.height = webcam.videoHeight;
+    canvas.getContext("2d").drawImage(webcam, 0, 0, canvas.width, canvas.height);
+
+    const imageUrl = canvas.toDataURL("image/png");
+    showCapturedImage(imageUrl);
+    webcam.srcObject.getVideoTracks().forEach(track => track.stop());
+  });
+
+  // Display the captured image
+  function showCapturedImage(imageUrl) {
+    const uploadedImage = document.getElementById("uploadedImage");
+    uploadedImage.src = imageUrl;
+    uploadedImage.style.display = "block";
+  }
+
+  // Initialize the webcam when the modal is opened
+  $('#uploadImageModal').on('shown.bs.modal', function () {
+    initCamera();
+  });
+
+  // Close the webcam when the modal is closed
+  $('#uploadImageModal').on('hidden.bs.modal', function () {
+    webcam.srcObject.getVideoTracks().forEach(track => track.stop());
+  });
+</script>
 
 </body>
 
