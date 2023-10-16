@@ -176,7 +176,7 @@
               <p><strong>Name:</strong> <span id="student-name">Arushi Versica Davis</span></p>
               <p><strong>Student ID:</strong> <span id="student-id">2141146</span></p>
               <p><strong>Email:</strong><span id="student-email">arushi.versica@bca.christuniversity.in</span></p>
-              <p><strong>Contact:</strong> <span id="student-contact">7903831729</span></p>
+              <p><strong>Contact:</strong> <span id="tudent-contact">7903831729</span></p>
               <p><strong>Address:</strong> <span id="student-address">kalpavriksha student housing</span></p>
               <button class="edit-button" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
               <!-- Button to trigger the modal -->
@@ -525,50 +525,6 @@
     }
   });
   </script>
-
-<script>
-  const webcamContainer = document.getElementById("webcamContainer");
-  const webcam = document.getElementById("webcam");
-  const captureButton = document.getElementById("captureButton");
-
-  // Get user media and display webcam video
-  async function initCamera() {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      webcam.srcObject = stream;
-    } catch (error) {
-      console.error("Error accessing webcam:", error);
-    }
-  }
-
-  captureButton.addEventListener("click", () => {
-    const canvas = document.createElement("canvas");
-    canvas.width = webcam.videoWidth;
-    canvas.height = webcam.videoHeight;
-    canvas.getContext("2d").drawImage(webcam, 0, 0, canvas.width, canvas.height);
-
-    const imageUrl = canvas.toDataURL("image/png");
-    showCapturedImage(imageUrl);
-    webcam.srcObject.getVideoTracks().forEach(track => track.stop());
-  });
-
-  // Display the captured image
-  function showCapturedImage(imageUrl) {
-    const uploadedImage = document.getElementById("uploadedImage");
-    uploadedImage.src = imageUrl;
-    uploadedImage.style.display = "block";
-  }
-
-  // Initialize the webcam when the modal is opened
-  $('#uploadImageModal').on('shown.bs.modal', function () {
-    initCamera();
-  });
-
-  // Close the webcam when the modal is closed
-  $('#uploadImageModal').on('hidden.bs.modal', function () {
-    webcam.srcObject.getVideoTracks().forEach(track => track.stop());
-  });
-</script>
 
 </body>
 

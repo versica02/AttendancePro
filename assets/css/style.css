@@ -247,7 +247,7 @@ h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #01036f;
+  color: #45064d;
 }
 
 .navbar .dropdown ul a i {
@@ -318,7 +318,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(1, 3, 91, 0.9);
+  background: #45064d;
   transition: 0.3s;
   z-index: 999;
 }
@@ -351,13 +351,13 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #0205a1;
+  color: #45064d;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #3f43fd;
+  color: #5b0866;
 }
 
 .navbar-mobile .getstarted,
@@ -1652,3 +1652,10 @@ section {
   align-items: center; /* Center vertically */
   margin-top: 20px; /* Adjust the margin as needed */
 }
+
+#imageContainer {
+  width: 200px; /* Fixed width for the container */
+  height: 200px; /* Fixed height for the container */
+  overflow: hidden; /* Hide overflow to maintain fixed shape */
+}
+
