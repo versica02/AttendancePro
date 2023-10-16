@@ -1491,7 +1491,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: rgba(48, 2, 54, 0.989);
+  background: #300236fc;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1503,9 +1503,9 @@ section {
 
 #footer .footer-top .footer-info {
   margin-bottom: 15px;
-  background: #010246;
+  background: #300236fc;
   color: #fff;
-  border-top: 4px solid #1acc8d;
+  border-top: 4px solid #300236fc;
   text-align: center;
   padding: 30px 20px;
 }
@@ -1540,7 +1540,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #1acc8d;
+  background: #300236fc;
   color: #fff;
   text-decoration: none;
 }
@@ -1565,7 +1565,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #61ebba;
+  color: #300236fc;
   font-size: 18px;
   line-height: 1;
 }
@@ -1614,7 +1614,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #1acc8d;
+  background: #300236fc;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
@@ -1625,7 +1625,7 @@ section {
 }
 
 #footer .copyright {
-  border-top: 1px solid #010479;
+  border-top: 1px solid #300236fc;
   text-align: center;
   padding-top: 30px;
 }
