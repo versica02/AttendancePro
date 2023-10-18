@@ -170,7 +170,7 @@
             <div class="student-details">
               <h2 class="mb-4">Student Details</h2>
               <div id="imageContainer" class="mt-3" style="width: 200px; height: 200px; overflow: hidden;">
-                <img id="uploadedImage" style="max-width: 100%; max-height: 100%; display: none;">
+                <img id="uploadedImage"  src="https://img.freepik.com/premium-vector/person-icon-flat-design-template-isolated-avatar-sign-vector-illustration_109161-1681.jpg"   style="max-width: 100%; max-height: 100%;">
               </div>
 
               <p><strong>Name:</strong> <span id="student-name">Arushi Versica Davis</span></p>
@@ -188,33 +188,21 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="uploadImageModalLabel">Upload Image</h5>
-                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        
                       </button>
                     </div>
                     <div class="modal-body">
                       <!-- Option to capture image from webcam -->
-                     <!-- Option to capture image from webcam -->
-<div id="webcamContainer">
-  <video id="webcam" autoplay playsinline style="max-width: 100%; max-height: 100%;"></video>
-  <div class="row mt-3">
-    <div class="col">
-      <button id="captureButton" class="btn btn-primary btn-block">Capture</button>
-    </div>
-  </div>
-</div>
-<!-- Form for uploading an image -->
-<form id="imageUploadForm" enctype="multipart/form-data">
-  <div class="form-group mt-3">
-    <label for="imageUpload">Or Choose Image</label>
-    <input type="file" class="form-control-file" id="imageUpload" name="image" accept="image/*">
-  </div>
-</form>
-
+                                      <!-- Option to capture image from webcam -->
+                    <div id="webcamContainer">
+                    <video id="webcam" autoplay playsinline style="max-width: 100%; max-height: 100%;"></video>
                     </div>
+                    </div>
+
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" id="uploadImageButton">Upload</button>
+                      <button id="captureButton" class="btn btn-primary btn-block edit-button">Capture</button>
+                      <button type="button" class="btn btn-primary edit-button" id="uploadImageButton">Upload</button>
                     </div>
                   </div>
                 </div>
