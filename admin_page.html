@@ -39,6 +39,7 @@
       border-radius: 5px;
       padding: 5px 10px;
       cursor: pointer;
+      margin: 45px;
     }
     .faculty-details {
       background-color: #fff;
@@ -131,6 +132,32 @@
     <!-- ======= Details Section ======= -->
         <section id="details" class="details">
             <div class="container">
+
+              
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="activateAttendanceSwitch" data-bs-toggle="modal" data-bs-target="#activateAttendanceModal">
+    <label class="form-check-label" for="activateAttendanceSwitch">Activate Attendance</label>
+  </div>
+  
+ <!-- Activate attendance modal -->
+  <div class="modal fade" id="activateAttendanceModal" tabindex="-1" aria-labelledby="activateAttendanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="activateAttendanceModalLabel">Activate Attendance</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <p>This is where you can display information and options for activating attendance.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- You can add additional buttons or functionality related to activating attendance here. -->
+            </div>
+        </div>
+    </div>
+</div>
               <!-- Button to open the teacher registration modal -->
 <button type="button" class="edit-button" data-bs-toggle="modal" data-bs-target="#teacherModal">
     Teacher Registration
@@ -292,7 +319,26 @@
     <label class="form-check-label" for="activateAttendanceSwitch">Activate Attendance</label>
   </div>
   
+ <!-- Activate attendance modal -->
+  <div class="modal fade" id="activateAttendanceModal" tabindex="-1" aria-labelledby="activateAttendanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="activateAttendanceModalLabel">Activate Attendance</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
 
+                <p>This is where you can display information and options for activating attendance.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- You can add additional buttons or functionality related to activating attendance here. -->
+            </div>
+        </div>
+    </div>
+</div>
+  
   
       </div>
     </section><!-- End Details Section -->
