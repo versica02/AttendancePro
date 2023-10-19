@@ -800,7 +800,7 @@ section {
 }
 
 .about .play-btn:hover::after {
-  border-left: 15px solid #3f43fd;
+  border-left: 15px solid #45064d;
   transform: scale(20);
 }
 
@@ -859,12 +859,12 @@ section {
 }
 
 .features .icon-box h3 a {
-  color: #010483;
+  color: #45064d;
   transition: ease-in-out 0.3s;
 }
 
 .features .icon-box h3 a:hover {
-  color: #01036f;
+  color: #45064d;
 }
 
 .features .icon-box:hover {
