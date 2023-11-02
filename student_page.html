@@ -40,6 +40,15 @@
       padding: 5px 10px;
       cursor: pointer;
     }
+    .opt-button {
+  background-color: #45064d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 10px;
+}
     .student-details {
       background-color: #fff;
       padding: 20px;
@@ -77,32 +86,22 @@
       background-color: #f2f2f2;
     }
 
-
-    .centered-container {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 20px;
-  position: relative;
-  top: -350px;
-}
-
 .buttoncontainer {
-  display: inline-block; /* Add this line to make it inline with the form */
-  vertical-align: top; /* Add this line to align it at the top of the form */
-  margin-left: 10px; /* Adjust the margin as needed to create space between the form and the buttoncontainer */
-  font-size: 30px; /* Increase the font size to your desired value */
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 200px;
 }
 
 .centered-container {
       text-align: center;
       margin-top: 20px;
       position: relative;
-      top: -350px;
       font-size: 20px;
-    
+      padding-right: 350px;
+      top: -70px;
     }
-
-    .centered-container1{
+.centered-container1{
 
       margin-right: 150px;
     }
@@ -207,13 +206,12 @@
                   </div>
                 </div>
               </div>
-
+            </section>
       
-
-    </section><!-- End Details Section -->
-
-  <div id="buttoncontainer" class="centered-container">
-    <button type="button" class="edit-button" class="centered-container1"  data-bs-toggle="modal" data-bs-target="#attendanceModal">
+  
+<div class="col-md-8">
+  <div id="buttoncontainer" class="centered-container" >
+    <button type="button" class="opt-button"  data-bs-toggle="modal" data-bs-target="#attendanceModal">
       Check Attendance
     </button>
     <div class="modal fade" id="attendanceModal" tabindex="-1" aria-labelledby="attendanceModalLabel" aria-hidden="true">
@@ -304,7 +302,7 @@
         </div>
       </div>
     </div>
-    <button type="button" class="edit-button" class="centered-container1" data-bs-toggle="modal" data-bs-target="#marksModal">
+    <button type="button" class="opt-button" data-bs-toggle="modal" data-bs-target="#marksModal">
       Marks Card
     </button>
     <div class="modal fade" id="marksModal" tabindex="-1" aria-labelledby="marksModalLabel" aria-hidden="true">
@@ -325,7 +323,7 @@
       </div>
     </div>
 
-    <button type="button" class="edit-button" data-bs-toggle="modal" data-bs-target="#feeModal">
+    <button type="button" class="opt-button" data-bs-toggle="modal" data-bs-target="#feeModal">
       Fee Details
     </button>
     <div class="modal fade" id="feeModal" tabindex="-1" aria-labelledby="feeModalLabel" aria-hidden="true">
@@ -346,6 +344,7 @@
       </div>
     </div>
   </div>
+</div>
 
 
   <!-- ======= Footer ======= -->
